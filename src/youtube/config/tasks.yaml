@@ -1,0 +1,27 @@
+search_youtube_task:
+  description: >
+    Search YouTube for the latest videos about {topic}.
+  expected_output: >
+    A list of video IDs for the most recent videos about {topic}.
+  agent: researcher
+
+scrape_videos_task:
+  description: >
+    Scrape the content of the videos identified in the search.
+  expected_output: >
+    A structured dataset containing details of the scraped videos.
+  agent: reporting_analyst
+
+research_task:
+  description: >
+    Conduct a thorough research about {topic}.
+  expected_output: >
+    A list with 10 bullet points of the most relevant information about {topic}.
+  agent: researcher
+
+reporting_task:
+  description: >
+    Review the context you got and expand each topic into a full section for a report.
+  expected_output: >
+    A fully fledged report with the main topics, each with a full section of information.
+  agent: reporting_analyst
